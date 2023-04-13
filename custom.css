@@ -1,0 +1,75 @@
+:root {
+    --gap: 12px;
+    --border-radius: 3px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: space-between;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+form fieldset input {
+    min-width: calc(33.333333% - var(--gap));
+    margin-bottom: 1%;
+    background-color: #f3f8f9;
+}
+
+form fieldset:nth-child(3) input {
+    min-width: calc(50% - var(--gap));
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input,
+button {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5em 0.7em;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+form fieldset:nth-child(2) input,
+button {
+    min-width: 100%;
+}
+
+button {
+    background-color: #4fa757;
+    padding: 0.7em;
+    color: #fff;
+    font-weight: bold;
+}
+
+input {
+    background-color: #f3f3f3;
+    border-radius: var(--border-radius);
+}
+
+@media(max-width:768px) {
+    form fieldset input {
+        min-width: 100% !important;
+    }
+}
